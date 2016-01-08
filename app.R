@@ -64,10 +64,10 @@ server <- function(input, output) {
   })
 
 
-  output$rows_out <- renderText({
-    paste(c('You selected these rows on the page:', input$rows, "UUU"),
-          collapse = ' ')
-  })
+#  output$rows_out <- renderText({
+#    paste(c('You selected these rows on the page:', input$rows, "UUU"),
+#          collapse = ' ')
+#  })
 
 
 }
