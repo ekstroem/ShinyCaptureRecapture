@@ -56,8 +56,12 @@ server <- function(input, output) {
     ## Do sanity checks
     ##    if input$n2
 
+    n <- reactive(input$n)
+    n1 <- reactive(input$n1)
+    n2 <- reactive(input$n2)
+    reps <- reactive(input$reps)
 
-    N <- reactive(sapply(1:input$reps, function(i) {input$n1*input$n2 / sum(sample(c(rep(1,input$n1), rep(0, input$n-input$n1)), size=intput$n2))}))
+    N <- sapply(1:reps, function(i) {n1*n2 / sum(sample(c(rep(1,n1), rep(0, n-n1)), size=n2))})
 
   output$plot <- renderPlot({
     par(mar=c(4,4,0,0)+.1, cex=1.4)
