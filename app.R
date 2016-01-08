@@ -49,6 +49,7 @@ ui <- fluidPage(
 
 
         )
+    )
 
 server <- function(input, output) {
   output$tbl <- renderDataTable(
