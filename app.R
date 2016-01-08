@@ -54,9 +54,10 @@ ui <- fluidPage(
 server <- function(input, output) {
 
     ## Do sanity checks
-#    if input$n2
+    ##    if input$n2
 
-    N <- sapply(1:input$reps, function(i) {input$n1*input$n2 / sum(sample(c(rep(1,input$n1), rep(0, input$n-input$n1)), size=intput$n2))})
+
+    N <- reactive(sapply(1:input$reps, function(i) {input$n1*input$n2 / sum(sample(c(rep(1,input$n1), rep(0, input$n-input$n1)), size=intput$n2))}))
 
   output$plot <- renderPlot({
     par(mar=c(4,4,0,0)+.1, cex=1.4)
