@@ -54,7 +54,7 @@ ui <- fluidPage(
 server <- function(input, output) {
 
     ## Do sanity checks
-    if input$n2
+#    if input$n2
 
   x2 <- sample(, size=, replace=FALSE)
 
