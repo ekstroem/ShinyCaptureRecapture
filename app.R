@@ -56,8 +56,6 @@ server <- function(input, output) {
     ## Do sanity checks
 #    if input$n2
 
-  x2 <- sample(, size=, replace=FALSE)
-
     N <- sapply(1:input$reps, function(i) {input$n1*input$n2 / sum(sample(c(rep(1,input$n1), rep(0, input$n-input$n1)), size=intput$n2))})
 
   output$plot <- renderPlot({
