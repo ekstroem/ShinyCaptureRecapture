@@ -61,7 +61,7 @@ server <- function(input, output) {
     n2 <- reactive(input$n2)
     reps <- reactive(input$reps)
 
-    N <- sapply(1:reps, function(i) {n1*n2 / sum(sample(c(rep(1,n1), rep(0, n-n1)), size=n2))})
+    N <- reactive(sapply(1:reps, function(i) {n1*n2 / sum(sample(c(rep(1,n1), rep(0, n-n1)), size=n2))}))
 
   output$plot <- renderPlot({
     par(mar=c(4,4,0,0)+.1, cex=1.4)
