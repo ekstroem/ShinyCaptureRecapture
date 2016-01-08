@@ -15,14 +15,14 @@ ui <- fluidPage(
         sidebarPanel(
             sliderInput("n",
                         "True population size:",
-                        value = 100,
+                        value = 1000,
                         min = 10,
                         max = 20000),
             br(),
 
             sliderInput("n1",
                         "Number of individual to capture:",
-                        value = 20,
+                        value = 100,
                         min = 1,
                         max = 200),
             br(),
