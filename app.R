@@ -17,7 +17,7 @@ ui <- fluidPage(
                         "True population size:",
                         value = 1000,
                         min = 10,
-                        max = 5000),
+                        max = 2000),
             br(),
 
             sliderInput("n1",
@@ -68,18 +68,14 @@ server <- function(input, output) {
         meanN <- mean(N)
 
         par(mar=c(4,4,0,0)+.1, cex=1.4)
-        hist(N, col="lightblue", main="")
+        hist(N, col="lightblue", main="", xlab="Estimated population size")
         abline(v=meanN, lty=3, lwd=3)
   })
 
 
-#  output$rows_out <- renderText({
-#    paste(c('You selected these rows on the page:', input$rows, "UUU"),
-#          collapse = ' ')
-#  })
-
-
 }
+
+
 
 shinyServer(server)
 
